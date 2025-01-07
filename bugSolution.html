@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Corrected HTML</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text should be visible.
+  </div>
+  <div id="nonExistent">
+      This element is now present
+  </div>
+  <script>
+    // Correct way to access an element that may not exist
+    var myDiv = document.getElementById('myDiv');
+    if (myDiv) {
+      myDiv.innerHTML = "<p>This text replaces the original content.</p>";
+    } else {
+      console.error("Div element with id 'myDiv' not found.");
+    }
+
+    //Correctly Adding an event listener
+    var nonExistentElement = document.getElementById('nonExistent');
+    if(nonExistentElement){
+      nonExistentElement.addEventListener('click', function(){
+        alert('Element clicked');
+      });
+    } else{
+      console.error("Element with id 'nonExistent' does not exist.");
+    }
+  </script>
+</body>
+</html>
