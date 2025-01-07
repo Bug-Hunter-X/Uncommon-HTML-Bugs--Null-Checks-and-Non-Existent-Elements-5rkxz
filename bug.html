@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text should be visible.
+  </div>
+
+  <script>
+    // Incorrect way to access an element that may not exist
+    var myDiv = document.getElementById('myDiv');
+    if (myDiv) {
+      myDiv.innerHTML = "<p>This text replaces the original content.</p>";
+    } else {
+      console.error("Div element with id 'myDiv' not found.");
+    }
+
+    //Another Example
+    //Attempting to add an event listener to a non-existent element.
+    var nonExistentElement = document.getElementById('nonExistent');
+    if(nonExistentElement){
+      nonExistentElement.addEventListener('click', function(){
+        alert('Element clicked');
+      });
+    } else{
+      console.error("Element with id 'nonExistent' does not exist.");
+    }
+  </script>
+</body>
+</html>
