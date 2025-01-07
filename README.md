@@ -1,0 +1,1 @@
+This repository showcases two uncommon but important errors in HTML programming:  Failure to handle the case where an element might not exist when you try to access or manipulate it. Attempting to add an event listener to a non-existent element.  The `bug.html` file demonstrates these errors. The `bugSolution.html` file provides corrected versions.
